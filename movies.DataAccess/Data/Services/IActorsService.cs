@@ -2,15 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using movies.DataAccess.Base;
 using movies.Models;
 
 namespace movies.DataAccess.Services;
 
-public interface IActorsService
+public interface IActorsService : IEntityBaseRepository<Actor>
 {
-    Task<IEnumerable<Actor>> GetAll();
-    Task<Actor> GetByIdAsync(int id);
-    Task AddAsync(Actor actor);
-    Task <Actor> UpdateAsync(Actor newActor);
-    public void Delete(Actor actor);
+    
 }

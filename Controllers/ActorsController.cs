@@ -5,11 +5,11 @@ using movies.DataAccess.Services;
 using movies.Models;
 
 namespace movies.Controllers;
-
+using movies.DataAccess.Base;
 public class ActorsController : Controller
 {
 
-    private readonly IActorsService _service;
+    private readonly IEntityBaseRepository<Actor> _service;
 
     public ActorsController(IActorsService service)
     {

@@ -1,11 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using movies.DataAccess.Base;
 
 namespace movies.Models;
 
-public class Actor
+public class Actor:IEntityBase
 {
     [Key]
-    public int ActorId { get; set; }
+    public int Id { get; set; }
     [Display(Name ="Profile Picture URL")]
 
     public string ProfilePictureUrl { get; set; }
